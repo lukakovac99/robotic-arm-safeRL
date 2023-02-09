@@ -1,0 +1,115 @@
+Code:
+        # Get the number of joints in the robot
+        numJoints = p.getNumJoints(robot)
+        # Loop over every joint in the robot
+        for jointIndex in range(numJoints):
+            # Get the joint info for the current joint
+            jointInfo = p.getJointInfo(robot, jointIndex)
+            # Print the joint info
+            print("Joint index:", jointIndex)
+            print("Joint name:", jointInfo[1].decode("utf-8"))
+            print("Joint type:", jointInfo[2])
+            print("Joint lower limit:", jointInfo[8])
+            print("Joint upper limit:", jointInfo[9])
+            print("Joint position:", p.getJointState(robot, jointIndex)[0])
+            print("")
+
+Info:
+
+Joint index: 0
+Joint name: J0
+Joint type: 0
+Joint lower limit: -2.96706
+Joint upper limit: 2.96706
+Joint position: 0.0
+
+Joint index: 1
+Joint name: J1
+Joint type: 0
+Joint lower limit: -2.0944
+Joint upper limit: 2.0944
+Joint position: 0.0
+
+Joint index: 2
+Joint name: J2
+Joint type: 0
+Joint lower limit: -2.96706
+Joint upper limit: 2.96706
+Joint position: 0.0
+
+Joint index: 3
+Joint name: J3
+Joint type: 0
+Joint lower limit: -2.0944
+Joint upper limit: 2.0944
+Joint position: 0.0
+
+Joint index: 4
+Joint name: J4
+Joint type: 0
+Joint lower limit: -2.96706
+Joint upper limit: 2.96706
+Joint position: 0.0
+
+Joint index: 5
+Joint name: J5
+Joint type: 0
+Joint lower limit: -2.0944
+Joint upper limit: 2.0944
+Joint position: 0.0
+
+Joint index: 6
+Joint name: J6
+Joint type: 0
+Joint lower limit: -3.05433
+Joint upper limit: 3.05433
+Joint position: 0.0
+
+Joint index: 7
+Joint name: gripper_to_arm
+Joint type: 4
+Joint lower limit: 0.0
+Joint upper limit: -1.0
+Joint position: 0.0
+
+Joint index: 8
+Joint name: base_left_finger_joint
+Joint type: 0
+Joint lower limit: -10.4
+Joint upper limit: 10.01
+Joint position: 0.0
+
+Joint index: 9
+Joint name: left_finger_base_joint
+Joint type: 4
+Joint lower limit: 0.0
+Joint upper limit: -1.0
+Joint position: 0.0
+
+Joint index: 10
+Joint name: left_base_tip_joint
+Joint type: 0
+Joint lower limit: -10.1
+Joint upper limit: 10.3
+Joint position: 0.0
+
+Joint index: 11
+Joint name: base_right_finger_joint
+Joint type: 0
+Joint lower limit: -10.01
+Joint upper limit: 10.4
+Joint position: 0.0
+
+Joint index: 12
+Joint name: right_finger_base_joint
+Joint type: 4
+Joint lower limit: 0.0
+Joint upper limit: -1.0
+Joint position: 0.0
+
+Joint index: 13
+Joint name: right_base_tip_joint
+Joint type: 0
+Joint lower limit: -10.3
+Joint upper limit: 10.1
+Joint position: 0.0
