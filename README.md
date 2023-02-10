@@ -3,8 +3,8 @@ A student project comparing reinforcement learning algorithms on a panda robotic
 
 ## Acknowledgement
 
-In this project we are using reinforcement learning agents developed by OpenAI from [Safety Starter Agents][https://github.com/openai/safety-starter-agents].
-For the environment we modified an existing OpenAI Gym environment for pybullet [gym-panda][https://github.com/mahyaret/gym-panda].
+In this project we are using reinforcement learning agents developed by OpenAI from [Safety Starter Agents](https://github.com/openai/safety-starter-agents).
+For the environment we modified an existing OpenAI Gym environment for pybullet [gym-panda](https://github.com/mahyaret/gym-panda).
 
 ## Requirements
 
@@ -16,4 +16,3 @@ Requires **Python 3.6**.
 
 coming soon
 
-TEST
