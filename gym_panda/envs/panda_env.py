@@ -11,7 +11,7 @@ import random
 
 
 MAX_EPISODE_LEN = 1000
-MODE = p.GUI # p.GUI or p.DIRECT - with or without rendering
+MODE = p.DIRECT # p.GUI or p.DIRECT - with or without rendering
 DIM_OBS = 8 # no. of dimensions in observation space
 DIM_ACT = 4 # no. of dimensions in action space 
 
