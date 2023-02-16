@@ -8,10 +8,7 @@ from datetime import datetime
 
 
 current_time = datetime.now().strftime("%Y-%m-%d_%H-%M_")
-file_name = "panda_ppo_action1_200epoch-6464nn"
-
-
-# HOW TO: safety_starter_agents + gym-panda
+file_name = "ppo_action1-obs8"
 
 ppo(
 	env_fn = lambda : gym.make('panda-v0'),
@@ -20,7 +17,6 @@ ppo(
 	steps_per_epoch=2000, # default: 4000
     epochs=200,
     max_ep_len=1000,
-                        
 	)
 
 
