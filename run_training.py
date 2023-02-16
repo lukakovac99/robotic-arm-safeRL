@@ -8,9 +8,9 @@ from datetime import datetime
 
 
 current_time = datetime.now().strftime("%Y-%m-%d_%H-%M_")
-file_name = "ppo_action1-obs8"
+file_name = "ppoLagr_action1-obs8"
 
-ppo(
+ppo_lagrangian(
 	env_fn = lambda : gym.make('panda-v0'),
 	ac_kwargs = dict(hidden_sizes=[64,64]),
 	logger_kwargs = dict(output_dir='exp-results/'+current_time+file_name, exp_name=(file_name)),

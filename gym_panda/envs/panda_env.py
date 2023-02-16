@@ -67,8 +67,6 @@ class PandaEnv(gym.Env):
         state_object, _ = p.getBasePositionAndOrientation(self.objectUid)
         state_robot = p.getLinkState(self.pandaUid, 11)[0]
         state_fingers = (p.getJointState(self.pandaUid,9)[0], p.getJointState(self.pandaUid, 10)[0])
-        
-        # panda arm tip state
         tip_state = p.getLinkState(self.pandaUid, 10)[0] #p.getJointState(self.pandaUid, 10)
 
         # Dense Reward:
