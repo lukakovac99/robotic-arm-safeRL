@@ -10,7 +10,7 @@ import numpy as np
 import random
 
 
-MAX_EPISODE_LEN = 1000
+MAX_EPISODE_LEN = 500
 MODE = p.DIRECT # p.GUI or p.DIRECT - with or without rendering
 DIM_OBS = 8 # no. of dimensions in observation space
 DIM_ACT = 4 # no. of dimensions in action space 
@@ -71,7 +71,7 @@ class PandaEnv(gym.Env):
 
         # Dense Reward:
         done = False
-        tip = tip_state
+        tip = state_robot  # tip_state
         obj = state_object
         result = [abs(tip[i] - obj[i]) for i in range(len(tip))]
         reward = -sum(result)
@@ -94,7 +94,7 @@ class PandaEnv(gym.Env):
         
         #print("REWARD: ",reward)
         info = {'cost': cost} # {'object_position': state_object}
-        self.observation = state_robot + state_fingers + state_object # joint_states
+        self.observation = state_robot + state_fingers + state_object # + state_robot
         return np.array(self.observation).astype(np.float32), reward, done, info
 
     def reset(self):
@@ -151,8 +151,11 @@ class PandaEnv(gym.Env):
         #=========================================================================#
         state_robot = p.getLinkState(self.pandaUid, 11)[0]
         state_fingers = (p.getJointState(self.pandaUid,9)[0], p.getJointState(self.pandaUid, 10)[0])
-        self.observation = state_robot + state_fingers + state_object # joint_states
+        tip_state = p.getLinkState(self.pandaUid, 10)[0]
+
+        self.observation = state_robot + state_fingers + state_object # + state_robot
         p.configureDebugVisualizer(p.COV_ENABLE_RENDERING,1)
+
         return np.array(self.observation).astype(np.float32)
 
     def render(self, mode='human'):
