@@ -1,4 +1,7 @@
 # Safe Reinforcement Learning on a Robotic Arm
+
+![](https://github.com/lukakovac99/robotic-arm-safeRL/panda-test.gif)
+
 A student project comparing reinforcement learning (RL) algorithms on a panda robotic arm. Implemented PPO and its safety version, PPO Lagrangian, taking into account costs such as avoiding obstacles. Explore the potential of safeRL in robotics.
 
 ## Acknowledgement
@@ -49,7 +52,7 @@ File to plot the training's data (reward, cost).
 - **test_policy.py**
 File to test the learned policy. 
 
-## Run examples
+## Getting started
 
 ### Runing training:
 
