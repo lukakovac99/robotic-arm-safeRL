@@ -59,7 +59,8 @@ File to test the learned policy.
 1. Set the name of the output file of the experiment in *run_training.py*.
 2. Set the configuration of the experiment (type of the algorithm, max episode length, number of epochs etc.).
 Make sure that max episode length is of the same value as defined in *panda_env.py*.
-3. To change the type of the algorithm, change the code in *run_training.py*:
+3. To change method of action exectution or obstacle generation method, just (de)comment out the desired options in *panda_env.py*.
+4. To change the type of the algorithm, change the code in *run_training.py*:
 ```
 ppo(
 	env_fn = lambda : gym.make('panda-v0'),
@@ -75,11 +76,11 @@ ppo_lagrangian(
 	logger_kwargs = dict(output_dir='exp-results/'+current_time+file_name, exp_name=(file_name))
 	)
 ```
-4. Run this command in the terminal:
+5. Run this command in the terminal:
 ```
 python run_training.py
 ```
-5. If error shows up, check if *MODE* in *panda_env.py* is set to *p.DIRECT*:
+6. If error shows up, check if *MODE* in *panda_env.py* is set to *p.DIRECT*:
 ```
 MODE = p.DIRECT
 ```
